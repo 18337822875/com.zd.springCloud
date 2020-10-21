@@ -1,17 +1,11 @@
-package com.zd.springCloud.dao;
+package com.zd.springCloud.service;
 
 import com.zd.springCloud.entities.Payment;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
 
-/**
- * @description:
- * @author: zd
- * @time: 2020/10/14 22:15
- */
-@Mapper
-public interface PaymentDao {
-
+@Service
+public interface PaymentService {
     public int create(Payment payment);
 
     public  Payment getPaymentById(@Param("id") long id);
